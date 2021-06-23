@@ -9,10 +9,8 @@
 }
 
 .instabutton {
-    background-image: url("../../assets/rsz_insta.png");
-    cursor: pointer;
-    border: none;
+    background-size: 100%;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
+    width: 58px;
+    height: 38px;
 }

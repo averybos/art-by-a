@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css';
 import HeaderLinks from './components/headerLinks/HeaderLinks'
-import FooterLinks from './components/footerLinks/footerLinks'
 import top from './assets/oldman.png'
 import './assets/pictures.css'
+import ScrollingDiv from './components/ScrollingDiv/ScrollingDiv'
 
 
 function App() {
@@ -17,8 +17,9 @@ function App() {
   return (
     <div className="App">
       <HeaderLinks/>
-      <img src={top} className='pictures'></img>
-      <FooterLinks/>
+      
+      <ScrollingDiv/>
+      
     </div>
   );
 }

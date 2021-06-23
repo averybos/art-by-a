@@ -1,0 +1,13 @@
+div.scrolling {
+    padding-top: 300px;
+}
+
+div.scrolling img{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    padding-right: 30px;
+    text-decoration: none;
+}
+
