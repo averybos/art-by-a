@@ -2,12 +2,12 @@ div.scrolling {
     padding-top: 300px;
 }
 
-div.scrolling img{
+.scrolling-img{
     display: inline-block;
-    color: white;
-    text-align: center;
-    padding-top: 100px;
     padding-right: 30px;
-    text-decoration: none;
+    padding-left: 30px;
+    white-space: nowrap; 
+    text-align: left;
+    border: transparent;
 }
 

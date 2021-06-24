@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css';
 import HeaderLinks from './components/headerLinks/HeaderLinks'
-import top from './assets/oldman.png'
 import './assets/pictures.css'
 import ScrollingDiv from './components/ScrollingDiv/ScrollingDiv'
 
@@ -9,11 +8,11 @@ import ScrollingDiv from './components/ScrollingDiv/ScrollingDiv'
 function App() {
   const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-  }, []);
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // }, []);
   return (
     <div className="App">
       <HeaderLinks/>
@@ -23,5 +22,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
