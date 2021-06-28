@@ -2,11 +2,11 @@
     text-align: right;
     font-family: 'Acme', sans-serif;
     font-size: calc(10px + 2vmin);
-    color: whitesmoke;
+    color: darkmagenta;
 }
 
 .anna {
-    font-size: calc(30px + 2vmin);
+    font-size: calc(40px + 2vmin);
 }
 
 .alignleft {
@@ -18,7 +18,7 @@
 }
 
 .link {
-    color:whitesmoke;
+    color:darkmagenta;
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 20px;
 }

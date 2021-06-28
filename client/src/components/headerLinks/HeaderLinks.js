@@ -11,12 +11,11 @@ const headerLinks = () => {
             <p className='alignright'>
                 <div className="menu">
                     <ul>
-                        <a> <Link className='link' to="/">Home</Link> </a>
-                        <a> <Link className='link' to="/about">About</Link> </a>
-                        <a> <Link className='link' to="/contact">Contact</Link> </a>
-                        <a href="https://instagram.com/aebostick" target="_blank">
-                            <img className='instabutton' 
-                            src={insta}></img>
+                        <a> <Link className='link' to="/">home</Link> </a>
+                        <a> <Link className='link' to="/about">about</Link> </a>
+                        <a> <Link className='link' to="/contact">contact</Link> </a>
+                        <a className='link' href="https://instagram.com/aebostick" target="_blank">
+                            insta
                         </a>
                     </ul>
                 </div>

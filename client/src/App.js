@@ -1,9 +1,7 @@
 import React from 'react'
 import './App.css';
 import {
-  BrowserRouter,
   Route,
-  Link,
   Switch,
   Redirect
 } from 'react-router-dom'
@@ -12,13 +10,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 
 function App() {
-  const [data, setData] = React.useState(null);
 
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
-  // }, []);
   return (
     <div className="App">
         <Switch>
@@ -29,7 +21,7 @@ function App() {
         </Switch>
     </div>
 
-  );
+  )
 }
 
 
