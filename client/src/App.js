@@ -1,9 +1,15 @@
 import React from 'react'
 import './App.css';
-import HeaderLinks from './components/headerLinks/HeaderLinks'
-import './assets/pictures.css'
-import ScrollingDiv from './components/ScrollingDiv/ScrollingDiv'
-
+import {
+  BrowserRouter,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from 'react-router-dom'
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   const [data, setData] = React.useState(null);
@@ -15,11 +21,14 @@ function App() {
   // }, []);
   return (
     <div className="App">
-      <HeaderLinks/>
-      
-      <ScrollingDiv/>
-      
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Redirect to="/" />
+        </Switch>
     </div>
+
   );
 }
 

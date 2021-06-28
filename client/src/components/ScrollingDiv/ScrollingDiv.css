@@ -1,5 +1,6 @@
 div.scrolling {
     padding-top: 300px;
+    scroll-behavior: smooth;
 }
 
 .scrolling-img{
@@ -8,6 +9,8 @@ div.scrolling {
     padding-left: 30px;
     white-space: nowrap; 
     text-align: left;
-    border: transparent;
+    border: none;
+    outline: none;
+
 }
 

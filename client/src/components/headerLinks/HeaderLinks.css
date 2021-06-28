@@ -2,7 +2,7 @@
     text-align: right;
     font-family: 'Acme', sans-serif;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: whitesmoke;
 }
 
 .anna {
@@ -15,4 +15,10 @@
 
 .alignright {
     float:right;
+}
+
+.link {
+    color:whitesmoke;
+    text-decoration: none;
+    padding-left: 10px;
 }
