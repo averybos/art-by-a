@@ -2,7 +2,7 @@
     text-align: right;
     font-family: 'Acme', sans-serif;
     font-size: calc(10px + 2vmin);
-    color: rgb(11, 49, 66);
+    color: rgb(77, 25, 77);
 }
 
 .anna {
@@ -18,7 +18,7 @@
 }
 
 .link {
-    color:rgb(11, 49, 66);
+    color:rgb(77, 25, 77);
     text-decoration: none;
     padding-left: 20px;
 }
