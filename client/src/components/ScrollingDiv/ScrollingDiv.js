@@ -3,6 +3,7 @@ import './ScrollingDiv.css'
 import LocomotiveScroll from 'locomotive-scroll'
 import * as $ from 'jquery'
 import mousewheel from 'jquery-mousewheel'
+import HorizontalScroll from 'react-scroll-horizontal'
 
 function importAll(r) {
     return r.keys().map(r)
@@ -41,21 +42,18 @@ const ScrollingDiv = () => {
     // console.log(inner_div,document.querySelector('.wrapper'))
 
 
-    let mouseWheelEvt = function (event) {
-        console.log('here')
-        if (document.body.doScroll)
-            document.body.doScroll(event.wheelDelta>0?"left":"right");
-        else if ((event.wheelDelta || event.detail) > 0) {
-            console.log('here?')
-            document.body.scrollLeft -= 10;
-        }
-        else {
-            console.log('here??')
-            document.body.scrollLeft += 10;
-        }
-        return false;
-    }
-    document.body.addEventListener("mousewheel", mouseWheelEvt, {passive:false});
+    // let mouseWheelEvt = function (event) {
+    //     if (document.body.doScroll)
+    //         document.body.doScroll(event.wheelDelta>0?"left":"right");
+    //     else if ((event.wheelDelta || event.detail) > 0) {
+    //         document.body.scrollLeft -= 10;
+    //     }
+    //     else {
+    //         document.body.scrollLeft += 10;
+    //     }
+    //     return false;
+    // }
+    // document.body.addEventListener("mousewheel", mouseWheelEvt, {passive:false});
 
     // const wheel = (e) => {
     //     e.preventDefault()
@@ -95,7 +93,7 @@ const ScrollingDiv = () => {
     //     } else {
     //       scrollY += delta;
         
-    //       //const overflow = scrollY - maxScrollY;
+    //       //const overflow = scrollY - maxScrol<HorizontalScroll>lY;
     //       //if (overflow > 0) {
     //         //scrollX += overflow;
     //         //scrollY = maxScrollY;
@@ -108,19 +106,19 @@ const ScrollingDiv = () => {
     // }
 
     return (
-        
-                <div className='wrapper'>
-                    {pic.map((item,i) => {
-                        return ( 
-                            <img
-                            className='scrolling-img'
-                            alt={item}
-                            src={images[i].default}
-                            key={item}
-                            />
-                        )})}
-                </div>
-        
+        <div className='wrapper'>
+            <HorizontalScroll style={{overflow: 'visible'}}>
+                {pic.map((item,i) => {
+                    return ( 
+                        <img
+                        className='scrolling-img'
+                        alt={item}
+                        src={images[i].default}
+                        key={item}
+                        />
+                    )})}
+            </HorizontalScroll>     
+        </div>
     )
 }
 
