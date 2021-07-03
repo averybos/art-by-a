@@ -13,3 +13,15 @@
   overflow: visible;
 }
 
+.description-visible {
+  border: 4px solid rgb(0, 100, 102);
+  border-radius: 5px;
+  padding: 10px;
+  color: rgb(0, 100, 102);
+  font-size: large;
+  font-family: 'Roboto', sans-serif;
+}
+
+.description-hidden {
+  display: none;
+}

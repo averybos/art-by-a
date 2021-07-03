@@ -1,6 +1,6 @@
 import React from 'react'
 import './ScrollingDiv.css'
-
+import ShowDescription from '../ShowDescription/ShowDescription'
 import HorizontalScroll from 'react-scroll-horizontal'
 
 function importAll(r) {
@@ -10,24 +10,50 @@ function importAll(r) {
 const images = importAll(require.context('../../assets/landscapes/', false, /\.(png|jpe?g|svg)$/));
 
 const pic = []
+const art_with_descriptions = {art: [], description: []}
 
-for (let i = 1; i <= images.length; i++) {
+for (let i = 1; i < images.length; i++) {
     pic.push(i)
+    art_with_descriptions.art.push(images[i].default)
+    art_with_descriptions.description.push('This is picture number ' + i)
+}
+
+const showOrHide = () => {
+    let classname = pressed ? 'description-visible' : 'description-hidden'
+    console.log(classname)
+
+}
+
+let pressed = false
+const clicked = (props) => {
+    console.log(pressed)
+    let img_name = props.target.alt
+    pressed = !pressed
 }
 
 const ScrollingDiv = () => {
 
+    const [showResults, setShowResults] = React.useState(false)
+    const onClick = () => setShowResults(true)
+
     return (
         <div className='wrapper'>
-            <HorizontalScroll style={{overflow: 'visible'}}>
-                {pic.map((item,i) => {
+            <HorizontalScroll 
+                style={{overflow: 'visible'}}
+                reverseScroll='true'
+            >
+                {art_with_descriptions.art.map((item,i) => {
                     return ( 
-                        <img
-                        className='scrolling-img'
-                        alt={item}
-                        src={images[i].default}
-                        key={item}
-                        />
+                        <div>
+                            <img
+                                className='scrolling-img'
+                                alt={item}
+                                src={item}
+                                key={i}
+                                onClick={onClick}
+                            />
+                            { showResults ? <ShowDescription description={art_with_descriptions.description[i]}/> : null }
+                        </div>
                     )})}
             </HorizontalScroll>     
         </div>

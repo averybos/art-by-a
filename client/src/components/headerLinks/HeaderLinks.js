@@ -1,7 +1,5 @@
 import React from 'react'
 import './HeaderLinks.css'
-import Button from '../UI/button'
-import insta from '../../assets/works.png'
 import {Link} from 'react-router-dom'
 
 const headerLinks = () => {
