@@ -19,18 +19,12 @@ for (let i = 1; i < images.length; i++) {
 }
 
 let pressed = false
-const clicked = (props) => {
-    let img_name = props.target.alt
+const clicked = () => {
     pressed = !pressed
 }
 
 const ScrollingDiv = () => {
 
-    const [showResults, setShowResults] = React.useState(false)
-    const onClick = () => setShowResults(true)
-
-
-    console.log(showResults)
     return (
         <div className='wrapper'>
             <HorizontalScroll 
