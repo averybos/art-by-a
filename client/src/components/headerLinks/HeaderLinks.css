@@ -7,6 +7,7 @@
 
 .anna {
     font-size: calc(40px + 2vmin);
+    transform: translate(0,-30px);
 }
 
 .alignleft {

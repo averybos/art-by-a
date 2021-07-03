@@ -18,15 +18,8 @@ for (let i = 1; i < images.length; i++) {
     art_with_descriptions.description.push('This is picture number ' + i)
 }
 
-const showOrHide = () => {
-    let classname = pressed ? 'description-visible' : 'description-hidden'
-    console.log(classname)
-
-}
-
 let pressed = false
 const clicked = (props) => {
-    console.log(pressed)
     let img_name = props.target.alt
     pressed = !pressed
 }
@@ -36,23 +29,27 @@ const ScrollingDiv = () => {
     const [showResults, setShowResults] = React.useState(false)
     const onClick = () => setShowResults(true)
 
+
+    console.log(showResults)
     return (
         <div className='wrapper'>
             <HorizontalScroll 
                 style={{overflow: 'visible'}}
-                reverseScroll='true'
+                reverseScroll={true}
             >
                 {art_with_descriptions.art.map((item,i) => {
                     return ( 
-                        <div>
+                        <div className='container'>
                             <img
                                 className='scrolling-img'
                                 alt={item}
                                 src={item}
                                 key={i}
-                                onClick={onClick}
+                                onClick={clicked}
                             />
-                            { showResults ? <ShowDescription description={art_with_descriptions.description[i]}/> : null }
+                            <ShowDescription description={art_with_descriptions.description[i]}
+                                    styling='description-visible'
+                                    p_styling='paragraph'/>
                         </div>
                     )})}
             </HorizontalScroll>     
