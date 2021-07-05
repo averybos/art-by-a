@@ -4,8 +4,7 @@ import '../ScrollingDiv/ScrollingDiv.css'
 const ShowDescription = (props) => {
     return (
         <div className={props.p_styling}>
-            <span className={props.styling} >{props.description}</span>
-            {console.log(props.pressed)} 
+            <span className={props.styling} >{props.description}</span> 
         </div>
     )
 }

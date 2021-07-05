@@ -18,13 +18,7 @@ for (let i = 1; i < images.length; i++) {
     art_with_descriptions.description.push('This is picture number ' + i)
 }
 
-let pressed = false
-const clicked = () => {
-    pressed = !pressed
-}
-
 const ScrollingDiv = () => {
-
     return (
         <div className='wrapper'>
             <HorizontalScroll 
@@ -39,7 +33,6 @@ const ScrollingDiv = () => {
                                 alt={item}
                                 src={item}
                                 key={i}
-                                onClick={clicked}
                             />
                             <ShowDescription description={art_with_descriptions.description[i]}
                                     styling='description-visible'
