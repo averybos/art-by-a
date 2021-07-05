@@ -1,0 +1,14 @@
+.contact-form {
+    transform: translate(0,300px);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-label {
+    padding:10px;
+}
+
+.contact-header {
+    transform: translate(0,200px);
+    font-family: 'Acme', sans-serif;
+    font-size: 75px;
+}
