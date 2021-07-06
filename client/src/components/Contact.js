@@ -9,6 +9,8 @@ const Contact = () => (
     <form className='contact-form'>
       <label className= 'contact-label'>Name</label>
       <input className='contact-input' type='text'></input>
+      <label className= 'contact-label'>Email</label>
+      <input className='contact-input' type='text'></input>
     </form>
   </div>
 );
