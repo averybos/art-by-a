@@ -3,11 +3,13 @@
     font-family: 'Acme', sans-serif;
     font-size: calc(10px + 2vmin);
     color: rgb(77, 25, 77);
+    
 }
 
 .anna {
     font-size: calc(40px + 2vmin);
     transform: translate(0,-30px);
+    position: fixed;
 }
 
 .alignleft {
@@ -16,6 +18,8 @@
 
 .alignright {
     float:right;
+    position: fixed;
+    padding-left: 1420px;
 }
 
 .link {

@@ -17,7 +17,6 @@ const headerLinks = () => {
                         </a>
                     </ul>
                 </div>
-               
             </p>
         </header>
     )
