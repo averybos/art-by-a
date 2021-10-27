@@ -9,9 +9,9 @@ const headerLinks = () => {
             <p className='alignright'>
                 <div className="menu">
                     <ul>
-                        <a> <Link className='link' to="/">home</Link> </a>
-                        <a> <Link className='link' to="/about">about</Link> </a>
-                        <a> <Link className='link' to="/contact">contact</Link> </a>
+                        <Link className='link' to="/">home</Link>
+                        <Link className='link' to="/about">about</Link>
+                        <Link className='link' to="/contact">contact</Link>
                         <a className='link' href="https://instagram.com/aebostick" target="_blank">
                             insta
                         </a>
