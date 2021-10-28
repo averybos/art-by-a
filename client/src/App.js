@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import './App.css';
 import {
   Route,
@@ -11,7 +11,7 @@ import Contact from './components/Contact';
 
 
 function App() {
-
+  
   return (
     <div className="App">
         <Switch>
